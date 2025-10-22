@@ -9,7 +9,7 @@ import {
 const router = Router();
 
 router.get('/cuentas', getCuentasHandler);
-router.get('/cuentas/:id', getCuentasById);
-router.get('/cuentas/balance/activo', getBalanceActivo);
+router.get('/cuenta/:id', getCuentasById);
+router.get('/cuentasBalance', getBalanceActivo);
 
 export default router;

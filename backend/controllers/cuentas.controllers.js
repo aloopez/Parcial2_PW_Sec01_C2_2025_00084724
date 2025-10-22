@@ -14,7 +14,7 @@ const parseBalance = (balanceString) => {
 
 export const getCuentasHandler = (req, res) => {
     const queryParams = req.query;
-    const hasQuery = Object.keys(query).length > 0;
+    const hasQuery = Object.keys(queryParams).length > 0;
 
     if (hasQuery) {
         const key = Object.keys(queryParams)[0];
@@ -48,9 +48,9 @@ export const getCuentasById = (req, res) => {
     const account = cuentas.find(cuenta => cuenta._id === id);
 
     if (account) {
-        return  res.json({ found: true, account });
+        return  res.json({ finded: true, account });
     } else {
-        return res.json({ found: false });
+        return res.json({ finded: false });
     }
 };
 
