@@ -1,5 +1,5 @@
 
-import cuentas from '../data/cuentas';
+import { cuentas }from '../data/cuentas.js';
 
 const parseBalance = (balanceString) => {
     if (!balanceString) return 0;
@@ -26,7 +26,7 @@ export const getCuentasHandler = (req, res) => {
             return res.status(400).json({ error: 'Parametro no valido' });
         }
 
-        const results = cuentas.filter(cuenta => cuenta[key] === value);\
+        const results = cuentas.filter(cuenta => cuenta[key] === value);
 
         switch (results.length) {
             case 0:

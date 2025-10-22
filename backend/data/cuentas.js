@@ -1,5 +1,5 @@
 
-export default cuentas = [
+export const cuentas = [
   {
     "_id": "68f863f0196d296c9e219f27",
     "isActive": true,

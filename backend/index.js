@@ -1,10 +1,10 @@
 
 import express from 'express';
-import cuentaRoutes from './controllers/cuentas.controllers.js';
+import router from './routes/cuentas.routes.js';
 const app = express();
 const PORT = 3130
 
-app.use('/', cuentaRoutes);
+app.use('/', router);
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
