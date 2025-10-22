@@ -1,6 +1,6 @@
 
-const express = require('express');
-const cuentaRoutes = require('./routes/cuentas.routes.js');
+import express from 'express';
+import cuentaRoutes from './controllers/cuentas.controllers.js';
 const app = express();
 const PORT = 3130
 
