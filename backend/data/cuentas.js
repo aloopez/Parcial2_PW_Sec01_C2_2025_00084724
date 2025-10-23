@@ -1,4 +1,4 @@
-
+// objetos de cuentas de clientes
 export const cuentas = [
   {
     "_id": "68f863f0196d296c9e219f27",

@@ -5,15 +5,15 @@ const parseBalance = (balanceString) => {
     if (!balanceString) return 0;
   // Quitamos el símbolo de dólar ($) y las comas (,)
   const cleanString = balanceString.replace(/[$,]/g, ''); // entre corchetes van los caracteres a eliminar
-  // la g indica que no pare en la primera coincidencia
-  //y el ultimo '' indica que se reemplace por nada
+  // la g indica que no pare en la primera coincidencia, que sea global
+  // y el ultimo '' indica que se reemplace por nada
 
-  // Lo convertimos a un número flotante
+  // convertimos el string limpio a número flotante
   return parseFloat(cleanString);
 };
 
-export const getCuentasHandler = (req, res) => {
-    const queryParams = req.query;
+export const getCuentasHandler = (req, res) => {    
+    const queryParams = req.query; // es un objeto de express que contiene lo que viene luego del ?
     const hasQuery = Object.keys(queryParams).length > 0;
 
     if (hasQuery) {
@@ -36,7 +36,7 @@ export const getCuentasHandler = (req, res) => {
             default:
                 return res.json({ finded: true, data: results });
         }
-    } else {
+    } else { // si la url no tiene query params es decir /cuentas
         return res.json({
             count:cuentas.length,
              data: cuentas });
